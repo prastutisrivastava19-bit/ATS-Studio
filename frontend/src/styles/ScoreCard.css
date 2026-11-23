@@ -1,0 +1,199 @@
+
+.score-card {
+  width: 100%;
+  padding: 24px;
+  background: #151b2d;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  color: #f1f5f9;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.score-card:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Header */
+
+.score-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #aeb8cc;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.score-card-icon {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+  border-radius: 10px;
+}
+
+/* Score */
+
+.score-card-content {
+  margin-top: 25px;
+}
+
+.score-card-score {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.score-value {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.score-total {
+  font-size: 17px;
+  color: #8994aa;
+}
+
+/* Status */
+
+.score-card-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  color: #cbd5e1;
+  font-size: 13px;
+}
+
+.score-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f87171;
+}
+
+.score-status-dot.excellent {
+  background: #34d399;
+}
+
+.score-status-dot.good {
+  background: #60a5fa;
+}
+
+.score-status-dot.needs-improvement {
+  background: #fbbf24;
+}
+
+.score-status-dot.poor {
+  background: #f87171;
+}
+
+/* Progress Bar */
+
+.score-card-progress {
+  width: 100%;
+  height: 8px;
+  margin-top: 24px;
+  overflow: hidden;
+  background: #252e43;
+  border-radius: 20px;
+}
+
+.score-card-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+  border-radius: 20px;
+  transition: width 0.6s ease;
+}
+
+/* Footer */
+
+.score-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  color: #8994aa;
+  font-size: 12px;
+}
+
+.score-card-trend {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.trend-positive {
+  color: #34d399;
+}
+
+.trend-negative {
+  color: #f87171;
+}
+
+/* Loading */
+
+.score-card-loading p {
+  margin-top: 15px;
+  color: #8994aa;
+  font-size: 13px;
+}
+
+.score-card-skeleton {
+  width: 110px;
+  height: 52px;
+  margin-top: 25px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    #252e43 25%,
+    #343e55 50%,
+    #252e43 75%
+  );
+  background-size: 200% 100%;
+  animation: score-loading 1.5s infinite;
+}
+
+@keyframes score-loading {
+  from {
+    background-position: 100% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/* Error */
+
+.score-card-error {
+  border-color: rgba(248, 113, 113, 0.3);
+}
+
+.score-card-error-message {
+  margin-top: 20px;
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .score-card {
+    padding: 20px;
+  }
+
+  .score-value {
+    font-size: 44px;
+  }
+}

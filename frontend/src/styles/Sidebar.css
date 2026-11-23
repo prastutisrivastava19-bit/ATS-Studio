@@ -1,0 +1,278 @@
+
+.sidebar {
+  width: 255px;
+  min-width: 255px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 16px 18px;
+  background: #111827;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  color: #cbd5e1;
+  transition: width 0.3s ease, min-width 0.3s ease;
+  z-index: 100;
+}
+
+.sidebar-collapsed {
+  width: 82px;
+  min-width: 82px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+/* Header */
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+.sidebar-logo {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+.sidebar-brand {
+  min-width: 0;
+}
+
+.sidebar-brand h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.sidebar-brand span {
+  display: block;
+  margin-top: 3px;
+  color: #8490a5;
+  font-size: 11px;
+}
+
+/* Toggle */
+
+.sidebar-toggle {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0 22px auto;
+  background: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 9px;
+  color: #aeb8cc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  background: #29354a;
+  color: #ffffff;
+}
+
+/* Navigation */
+
+.sidebar-section-title {
+  margin: 0 0 12px 10px;
+  color: #68758c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sidebar-link {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #9ca9bd;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+.sidebar-link-active {
+  background: rgba(124, 58, 237, 0.16);
+  border-color: rgba(139, 92, 246, 0.18);
+  color: #b99aff;
+}
+
+.sidebar-link-active .sidebar-link-icon {
+  color: #a78bfa;
+}
+
+.sidebar-link-icon {
+  flex-shrink: 0;
+}
+
+.sidebar-link-text {
+  white-space: nowrap;
+}
+
+/* Support */
+
+.sidebar-support {
+  margin-top: 35px;
+}
+
+/* Bottom */
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.sidebar-upgrade {
+  padding: 17px 14px;
+  margin-bottom: 17px;
+  background: linear-gradient(
+    145deg,
+    rgba(124, 58, 237, 0.16),
+    rgba(37, 99, 235, 0.10)
+  );
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  border-radius: 12px;
+}
+
+.upgrade-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 9px;
+  color: #c4b5fd;
+}
+
+.sidebar-upgrade h3 {
+  margin: 0 0 7px;
+  color: #e9e5ff;
+  font-size: 12px;
+}
+
+.sidebar-upgrade p {
+  margin: 0;
+  color: #9ca9bd;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+/* Logout */
+
+.sidebar-logout {
+  width: 100%;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 0 12px;
+  background: transparent;
+  border: none;
+  border-radius: 9px;
+  color: #9ca9bd;
+  font-size: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sidebar-logout:hover {
+  background: rgba(248, 113, 113, 0.1);
+  color: #f87171;
+}
+
+/* Collapsed Layout */
+
+.sidebar-collapsed .sidebar-header {
+  justify-content: center;
+  padding: 0;
+}
+
+.sidebar-collapsed .sidebar-toggle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sidebar-collapsed .sidebar-link {
+  justify-content: center;
+  padding: 0;
+}
+
+.sidebar-collapsed .sidebar-logout {
+  justify-content: center;
+  padding: 0;
+}
+
+.sidebar-collapsed .sidebar-upgrade {
+  min-height: 12px;
+  padding: 5px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 82px;
+    min-width: 82px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .sidebar-brand,
+  .sidebar-section-title,
+  .sidebar-link-text,
+  .sidebar-upgrade h3,
+  .sidebar-upgrade p,
+  .upgrade-icon,
+  .sidebar-logout span {
+    display: none;
+  }
+
+  .sidebar-header {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sidebar-link,
+  .sidebar-logout {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sidebar-upgrade {
+    min-height: 12px;
+    padding: 5px;
+  }
+}

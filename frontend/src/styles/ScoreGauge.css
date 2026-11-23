@@ -1,0 +1,152 @@
+
+.score-gauge-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #151b2d;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  color: #f1f5f9;
+}
+
+.score-gauge-label {
+  margin: 0 0 24px;
+  color: #aeb8cc;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Gauge */
+
+.score-gauge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-gauge-svg {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.score-gauge-track {
+  stroke: #29334a;
+}
+
+.score-gauge-progress {
+  transition: stroke-dashoffset 0.8s ease;
+}
+
+/* Center Content */
+
+.score-gauge-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.score-gauge-value {
+  color: #ffffff;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.score-gauge-total {
+  margin-top: 8px;
+  color: #8994aa;
+  font-size: 13px;
+}
+
+/* Status */
+
+.score-gauge-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  color: #cbd5e1;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.score-gauge-status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f87171;
+}
+
+.score-gauge-status-dot.excellent {
+  background: #34d399;
+}
+
+.score-gauge-status-dot.good {
+  background: #60a5fa;
+}
+
+.score-gauge-status-dot.needs-improvement {
+  background: #fbbf24;
+}
+
+.score-gauge-status-dot.poor {
+  background: #f87171;
+}
+
+/* Loading */
+
+.score-gauge-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 35px 0;
+  color: #8994aa;
+  font-size: 13px;
+}
+
+.score-gauge-loading-circle {
+  width: 70px;
+  height: 70px;
+  border: 5px solid #29334a;
+  border-top-color: #8b5cf6;
+  border-radius: 50%;
+  animation: gauge-spin 1s linear infinite;
+}
+
+@keyframes gauge-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+
+.score-gauge-error {
+  padding: 35px 10px;
+  color: #fca5a5;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .score-gauge-container {
+    padding: 20px;
+  }
+
+  .score-gauge-value {
+    font-size: 46px;
+  }
+}

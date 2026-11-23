@@ -1,0 +1,8 @@
+
+@import "./Login.css";
+
+.auth-success {
+  margin-bottom: 15px;
+  color: #16a34a;
+  font-size: 13px;
+}
