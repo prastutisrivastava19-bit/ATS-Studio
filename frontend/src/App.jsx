@@ -102,7 +102,7 @@ const Dashboard = ({
       formData.append("resume", resumeFile);
 
       const uploadResponse = await fetch(
-        "http://localhost:5000/api/resumes/upload",
+        "https://ats-studio-8cbm.onrender.com/api/resumes/upload",
         {
           method: "POST",
           headers: {
@@ -128,7 +128,7 @@ const Dashboard = ({
 
       // Step 2: Analyze resume
       const analysisResponse = await fetch(
-        `http://localhost:5000/api/resumes/${resumeId}/analyze`,
+        `https://ats-studio-8cbm.onrender.com/api/resumes/${resumeId}/analyze`,
         {
           method: "POST",
           headers: {
